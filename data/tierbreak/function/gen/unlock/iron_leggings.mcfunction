@@ -1,0 +1,7 @@
+# GENERADO por tools/generate.py - no editar a mano
+# Interno: @s rompió unos pantalones de hierro
+scoreboard players set @s tb.b.iron_leggings 0
+execute if score @s tb.leggings matches 3.. run return 0
+scoreboard players set @s tb.leggings 3
+tellraw @s [{"text":""},{"text":"¡Nuevo tier! ","color":"gold","bold":true},{"text":"Ya puedes llevar ","color":"green"},{"text":"los pantalones de diamante ","color":"white"},{"type":"object","object":"atlas","atlas":"minecraft:items","sprite":"item/diamond_leggings","color":"white"},{"text":" y de netherita ","color":"white"},{"type":"object","object":"atlas","atlas":"minecraft:items","sprite":"item/netherite_leggings","color":"white"},{"text":". Es el tier máximo.","color":"aqua"}]
+execute at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.8 1.2
