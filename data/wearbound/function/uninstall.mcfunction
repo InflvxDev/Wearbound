@@ -7,6 +7,9 @@ function wearbound:gen/uninstall
 scoreboard objectives remove wb.calc
 scoreboard objectives remove wb.leave
 scoreboard objectives remove wb.seen
+scoreboard objectives remove wb.mode
+scoreboard objectives remove wb.pick
+scoreboard objectives remove wb.ask
 scoreboard objectives remove wb.lock
 scoreboard objectives remove wb.cd
 scoreboard objectives remove wb.acd

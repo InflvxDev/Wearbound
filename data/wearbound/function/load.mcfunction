@@ -2,8 +2,14 @@
 scoreboard objectives add wb.calc dummy
 # Detecta cuando un jugador vuelve a entrar
 scoreboard objectives add wb.leave minecraft.custom:minecraft.leave_game
-# Ya vio la explicación (1)
+# Ya eligió su progresión (1)
 scoreboard objectives add wb.seen dummy
+# Progresión elegida: 1 = Wearbound, 2 = vanilla
+scoreboard objectives add wb.mode dummy
+# Botones del diálogo de la primera vez (cualquier jugador, sin OP)
+scoreboard objectives add wb.pick trigger
+# Ticks que faltan para mostrar el diálogo de la primera vez
+scoreboard objectives add wb.ask dummy
 # Tiene puestos los modificadores de bloqueo (1)
 scoreboard objectives add wb.lock dummy
 # Esperas de los avisos (en ticks) para no repetirlos cada tick

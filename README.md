@@ -11,13 +11,19 @@ Progresión por roturas para SMP (Minecraft 26.4): para usar un material **tiene
 
 Ejemplos: para usar un **pico de cobre** hay que haber roto un **pico de piedra**. Para ponerse **botas de hierro** hay que haber roto unas **botas de cobre**. Para el **casco de diamante** sirve romper un casco de hierro **o** uno de cota de malla.
 
+## Elección al entrar
+La primera vez que un jugador entra al mundo le sale un diálogo (no se cierra con Esc) donde elige su progresión:
+- **Wearbound:** el sistema de arriba. Le sale la explicación en el chat.
+- **Vanilla:** todo desbloqueado desde el principio, sin necesitar a un admin.
+
+Se pregunta una sola vez. Si sale del servidor sin elegir, se le pregunta de nuevo al volver. En el panel de admin los que eligieron vanilla salen marcados como **Vanilla**, y un admin puede cambiarlos con **Reiniciar** (pasa a Wearbound desde madera y cuero) o **Desbloquear todo**.
+
 ## Cómo se bloquea
 - **Herramientas y armas:** se pueden tener en el inventario, pero si se sostienen (en cualquiera de las dos manos) el jugador no puede minar, pegar ni usarlas (velocidad de minado, daño y alcance a 0). En la barra de acción sale qué tiene que romper para desbloquearla.
 - **Armadura:** si se equipa una pieza bloqueada (a mano, con shift-clic o con un dispensador), vuelve sola al inventario y sale un mensaje con lo que hay que romper.
 - Da igual cómo se consiguió el ítem: crafteado, de un cofre, de un aldeano o de un mob.
 - Al romper algo sale el mensaje **¡Nuevo tier!** con lo que se desbloqueó y lo siguiente que hay que romper.
 - Los jugadores en **creativo** o **espectador** no tienen restricciones.
-- Cada jugador ve una explicación corta la primera vez que entra.
 
 ## Panel de admin
 `/function wearbound:menu` (requiere OP) abre un diálogo con todos los jugadores (también los desconectados), ordenados por progreso:

@@ -9,4 +9,6 @@ execute if score #pos wb.calc matches 1 run data modify storage wearbound:tmp li
 execute if score #pos wb.calc matches 2 run data modify storage wearbound:tmp line.contents.extra[0].color set value "#C0C0C0"
 execute if score #pos wb.calc matches 3 run data modify storage wearbound:tmp line.contents.extra[0].color set value "#CD7F32"
 $execute if score #v wb.calc matches $(m).. run data modify storage wearbound:tmp line.contents.extra[-1].color set value "gold"
+# Quien eligió vanilla sale marcado en vez de con su progreso
+$execute if score $(n) wb.mode matches 2 run data modify storage wearbound:tmp line.contents.extra[-1] set value {text:" Vanilla",color:"green"}
 data modify storage wearbound:tmp ui.body append from storage wearbound:tmp line

@@ -8,4 +8,5 @@ function wearbound:player/register
 # Por si salió con una herramienta bloqueada en la mano
 scoreboard players set @s wb.lock 1
 function wearbound:lock/off
-execute unless score @s wb.seen matches 1 run function wearbound:gen/welcome
+# Primera vez: en 2 segundos se le pregunta qué progresión quiere
+execute unless score @s wb.seen matches 1 run scoreboard players set @s wb.ask 40

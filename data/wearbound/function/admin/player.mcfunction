@@ -19,6 +19,8 @@ data modify storage wearbound:tmp h set value {}
 execute store result storage wearbound:tmp h.v int 1 run scoreboard players get #v wb.calc
 data modify storage wearbound:tmp h.m set from storage wearbound:db max
 function wearbound:admin/player_header with storage wearbound:tmp h
+$execute if score $(n) wb.mode matches 2 run data modify storage wearbound:tmp ui.body append value {type:"minecraft:plain_message",width:300,contents:{text:"Eligió progresión vanilla: tiene todo desbloqueado.",color:"green"}}
+$execute unless score $(n) wb.seen matches 1 run data modify storage wearbound:tmp ui.body append value {type:"minecraft:plain_message",width:300,contents:{text:"Todavía no eligió su progresión.",color:"gray",italic:true}}
 
 # Un ítem por tipo
 $function wearbound:gen/detail {n:"$(n)"}

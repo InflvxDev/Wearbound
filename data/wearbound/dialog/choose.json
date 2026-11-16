@@ -1,0 +1,217 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Wearbound",
+    "color": "gold",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 320,
+      "contents": [
+        {
+          "text": ""
+        },
+        {
+          "text": "¿Qué tipo de progresión quieres en este mundo?",
+          "color": "white"
+        },
+        {
+          "text": " Solo se pregunta esta vez.",
+          "color": "gray"
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 320,
+      "contents": [
+        {
+          "text": ""
+        },
+        {
+          "text": "Wearbound",
+          "color": "gold",
+          "bold": true
+        },
+        {
+          "text": ": para usar un material primero tienes que romper uno del material anterior, del mismo tipo (pico para pico, botas para botas).",
+          "color": "gray"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/wooden_pickaxe",
+          "color": "white"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/stone_pickaxe",
+          "color": "white"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/copper_pickaxe",
+          "color": "white"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/iron_pickaxe",
+          "color": "white"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/diamond_pickaxe",
+          "color": "white"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_chestplate",
+          "color": "#B4774A"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/copper_chestplate",
+          "color": "white"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/iron_chestplate",
+          "color": "white"
+        },
+        {
+          "text": "/",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/chainmail_chestplate",
+          "color": "white"
+        },
+        {
+          "text": " > ",
+          "color": "dark_gray"
+        },
+        {
+          "type": "object",
+          "object": "atlas",
+          "atlas": "minecraft:items",
+          "sprite": "item/diamond_chestplate",
+          "color": "white"
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 320,
+      "contents": [
+        {
+          "text": ""
+        },
+        {
+          "text": "Vanilla",
+          "color": "green",
+          "bold": true
+        },
+        {
+          "text": ": todo el equipo desbloqueado desde el principio, como en el juego normal.",
+          "color": "gray"
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 320,
+      "contents": [
+        {
+          "text": ""
+        },
+        {
+          "text": "Después solo un admin puede cambiarlo.",
+          "color": "dark_gray",
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "pause": false,
+  "can_close_with_escape": false,
+  "after_action": "close",
+  "actions": [
+    {
+      "label": {
+        "text": "Wearbound",
+        "color": "gold"
+      },
+      "tooltip": {
+        "text": "Romper el equipo para subir de tier"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger wb.pick set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Vanilla",
+        "color": "green"
+      },
+      "tooltip": {
+        "text": "Todo desbloqueado desde el principio"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger wb.pick set 2"
+      }
+    }
+  ]
+}
