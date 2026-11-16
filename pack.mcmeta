@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": [{"text":"[","color":"gray"},{"text":"Tier","color":"#E8875A"},{"text":" Break","color":"#5DE0E6"},{"text":"] ","color":"gray"},{"text":"Rompe tu equipo para subir de tier","color":"white"}],
+    "description": [{"text":"[","color":"gray"},{"text":"Wear","color":"#E8875A"},{"text":"bound","color":"#5DE0E6"},{"text":"] ","color":"gray"},{"text":"Rompe tu equipo para subir de tier","color":"white"}],
     "min_format": 121,
     "max_format": 130
   }

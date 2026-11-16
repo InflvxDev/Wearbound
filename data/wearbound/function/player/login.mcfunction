@@ -1,8 +1,11 @@
 # Interno: @s acaba de entrar (o se recargó el datapack)
-scoreboard players set @s tb.leave 0
-function tierbreak:gen/init
-function tierbreak:player/register
+scoreboard players set @s wb.leave 0
+# El permiso del panel dura hasta salir: hay que volver a abrir /function wearbound:menu
+tag @s remove wb.admin
+scoreboard players reset @s wb.admin
+function wearbound:gen/init
+function wearbound:player/register
 # Por si salió con una herramienta bloqueada en la mano
-scoreboard players set @s tb.lock 1
-function tierbreak:lock/off
-execute unless score @s tb.seen matches 1 run function tierbreak:gen/welcome
+scoreboard players set @s wb.lock 1
+function wearbound:lock/off
+execute unless score @s wb.seen matches 1 run function wearbound:gen/welcome

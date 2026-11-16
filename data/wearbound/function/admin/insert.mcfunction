@@ -1,1 +1,1 @@
-$data modify storage tierbreak:tmp sorted insert $(i) from storage tierbreak:tmp row
+$data modify storage wearbound:tmp sorted insert $(i) from storage wearbound:tmp row

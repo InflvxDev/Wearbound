@@ -1,11 +1,11 @@
 # Interno: busca la primera posición cuyo valor sea menor que #v
-execute if score #lo tb.calc >= #hi tb.calc run return 0
-scoreboard players operation #mid tb.calc = #lo tb.calc
-scoreboard players operation #mid tb.calc += #hi tb.calc
-scoreboard players operation #mid tb.calc /= #2 tb.calc
-execute store result storage tierbreak:tmp b.m int 1 run scoreboard players get #mid tb.calc
-function tierbreak:admin/mid with storage tierbreak:tmp b
-execute if score #m tb.calc >= #v tb.calc run scoreboard players operation #lo tb.calc = #mid tb.calc
-execute if score #m tb.calc >= #v tb.calc run scoreboard players add #lo tb.calc 1
-execute if score #m tb.calc < #v tb.calc run scoreboard players operation #hi tb.calc = #mid tb.calc
-function tierbreak:admin/bsearch
+execute if score #lo wb.calc >= #hi wb.calc run return 0
+scoreboard players operation #mid wb.calc = #lo wb.calc
+scoreboard players operation #mid wb.calc += #hi wb.calc
+scoreboard players operation #mid wb.calc /= #2 wb.calc
+execute store result storage wearbound:tmp b.m int 1 run scoreboard players get #mid wb.calc
+function wearbound:admin/mid with storage wearbound:tmp b
+execute if score #m wb.calc >= #v wb.calc run scoreboard players operation #lo wb.calc = #mid wb.calc
+execute if score #m wb.calc >= #v wb.calc run scoreboard players add #lo wb.calc 1
+execute if score #m wb.calc < #v wb.calc run scoreboard players operation #hi wb.calc = #mid wb.calc
+function wearbound:admin/bsearch

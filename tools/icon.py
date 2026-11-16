@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tier Break - genera pack.png (pixel art 64x64 escalado x4 = 256x256).
+"""Wearbound - genera pack.png (pixel art 64x64 escalado x4 = 256x256).
 
 Un pico grande cuya cabeza recorre los 5 tiers (madera -> diamante) y cuyo
 mango se está partiendo, con chispas y astillas de cada material.

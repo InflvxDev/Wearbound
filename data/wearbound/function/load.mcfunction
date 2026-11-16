@@ -1,19 +1,22 @@
-# Tier Break - carga
-scoreboard objectives add tb.calc dummy
+# Wearbound - carga
+scoreboard objectives add wb.calc dummy
 # Detecta cuando un jugador vuelve a entrar
-scoreboard objectives add tb.leave minecraft.custom:minecraft.leave_game
+scoreboard objectives add wb.leave minecraft.custom:minecraft.leave_game
 # Ya vio la explicación (1)
-scoreboard objectives add tb.seen dummy
+scoreboard objectives add wb.seen dummy
 # Tiene puestos los modificadores de bloqueo (1)
-scoreboard objectives add tb.lock dummy
+scoreboard objectives add wb.lock dummy
 # Esperas de los avisos (en ticks) para no repetirlos cada tick
-scoreboard objectives add tb.cd dummy
-scoreboard objectives add tb.acd dummy
-scoreboard players set #2 tb.calc 2
+scoreboard objectives add wb.cd dummy
+scoreboard objectives add wb.acd dummy
+scoreboard players set #2 wb.calc 2
+scoreboard players set #100000 wb.calc 100000
+# Botones del panel de admin (solo funciona para quien abrió /function wearbound:menu)
+scoreboard objectives add wb.admin trigger
 
-# Tiers por tipo (tb.sword, tb.boots, ...) y estadísticas de roturas (tb.b.*)
-function tierbreak:gen/objectives
-function tierbreak:gen/db
-execute unless data storage tierbreak:players list run data modify storage tierbreak:players list set value []
+# Tiers por tipo (wb.sword, wb.boots, ...) y estadísticas de roturas (wb.b.*)
+function wearbound:gen/objectives
+function wearbound:gen/db
+execute unless data storage wearbound:players list run data modify storage wearbound:players list set value []
 
-execute as @a run function tierbreak:player/login
+execute as @a run function wearbound:player/login

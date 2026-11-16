@@ -1,1 +1,1 @@
-$execute store result score #m tb.calc run data get storage tierbreak:tmp sorted[$(m)].v
+$execute store result score #m wb.calc run data get storage wearbound:tmp sorted[$(m)].v
