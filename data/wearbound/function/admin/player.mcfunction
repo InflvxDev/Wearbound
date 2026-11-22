@@ -1,8 +1,9 @@
 # Detalle de un jugador: /function wearbound:admin/player {n:"Steve"}
 # Muestra el ítem del mejor tier de cada tipo y qué tiene que romper después.
 $execute unless data storage wearbound:players list[{n:"$(n)"}] run return run tellraw @s {text:"No hay ningún jugador registrado con el nombre \"$(n)\".",color:"red"}
-tag @s add wb.admin
-scoreboard players enable @s wb.admin
+# Por comando da permiso. Desde un botón corre en el tick (grant no aplica) y @s ya lo tiene.
+function wearbound:admin/grant
+execute unless entity @s[tag=wb.admin] run return fail
 
 # Valores del trigger para los botones: d = detalle, m = desbloquear todo, r = reiniciar
 $data modify storage wearbound:tmp pd set from storage wearbound:players list[{n:"$(n)"}]

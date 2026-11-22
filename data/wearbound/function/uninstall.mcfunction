@@ -14,6 +14,7 @@ scoreboard objectives remove wb.lock
 scoreboard objectives remove wb.cd
 scoreboard objectives remove wb.acd
 scoreboard objectives remove wb.admin
+scoreboard objectives remove wb.time
 tag @a remove wb.admin
 data remove storage wearbound:db icons
 data remove storage wearbound:db detail

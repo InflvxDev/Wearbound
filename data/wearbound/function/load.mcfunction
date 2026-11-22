@@ -19,6 +19,12 @@ scoreboard players set #2 wb.calc 2
 scoreboard players set #100000 wb.calc 100000
 # Botones del panel de admin (solo funciona para quien abrió /function wearbound:menu)
 scoreboard objectives add wb.admin trigger
+# Ticks que le quedan al permiso del panel
+scoreboard objectives add wb.time dummy
+# Al arrancar o recargar se cierran todos los permisos, también los de desconectados
+# (un cierre forzado no suma leave_game y el permiso quedaría guardado)
+scoreboard players reset * wb.admin
+scoreboard players reset * wb.time
 
 # Tiers por tipo (wb.sword, wb.boots, ...) y estadísticas de roturas (wb.b.*)
 function wearbound:gen/objectives

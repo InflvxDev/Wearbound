@@ -9,3 +9,4 @@ execute as @a[scores={wb.pick=1..}] run function wearbound:player/choose
 
 # Botones del panel de admin (van por /trigger, así no sale la confirmación de comandos)
 execute as @a[scores={wb.admin=1..}] run function wearbound:admin/trigger
+execute as @a[tag=wb.admin] run function wearbound:admin/session

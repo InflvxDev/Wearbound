@@ -1,8 +1,7 @@
 # Interno: @s acaba de entrar (o se recargó el datapack)
 scoreboard players set @s wb.leave 0
-# El permiso del panel dura hasta salir: hay que volver a abrir /function wearbound:menu
-tag @s remove wb.admin
-scoreboard players reset @s wb.admin
+# El permiso del panel no sobrevive a salir ni a /reload
+function wearbound:admin/revoke
 function wearbound:gen/init
 function wearbound:player/register
 # Por si salió con una herramienta bloqueada en la mano
