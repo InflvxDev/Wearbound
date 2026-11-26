@@ -28,10 +28,11 @@ Se pregunta una sola vez. Si sale del servidor sin elegir, se le pregunta de nue
 ## Panel de admin
 `/function wearbound:menu` (requiere OP) abre un diálogo con todos los jugadores (también los desconectados), ordenados por progreso:
 
-`1. [cabeza] Jugador ..... [íconos de herramientas]  [íconos de armadura]  22/36`
+`1. [cabeza] Jugador ..... [íconos de herramientas]  [íconos de armadura]  22/36  [⬆] [↺]`
 
 - Cada ícono es el mejor tier que el jugador puede usar en ese tipo. Pasa el ratón por encima para ver el nombre del tier.
-- **Toca un nombre** para ver el detalle: el ítem de cada tipo, su tier (por ejemplo 4/5) y qué tiene que romper después. Desde ahí puedes **Desbloquear todo** o **Reiniciar** su progreso.
+- Al final de cada fila: **[⬆]** desbloquea todo y **[↺]** reinicia su progreso (pide confirmación), sin salir de la lista.
+- **Toca un nombre** para ver el detalle: el ítem de cada tipo, su tier (por ejemplo 4/5) y qué tiene que romper después. Desde ahí también puedes **Desbloquear todo** o **Reiniciar**.
 
 - Se cierra con **Esc**.
 - Los botones del panel usan `/trigger wb.admin` (como StatsCraft), así no aparece la pantalla de "Confirm Command Execution". Solo funcionan para quien abrió el panel él mismo con `/function wearbound:menu`, y ese permiso dura **2 minutos desde el último botón**, o hasta que sale o se usa `/reload`. Al quitarle el OP a alguien usa `/reload` para cortarle el permiso al instante.

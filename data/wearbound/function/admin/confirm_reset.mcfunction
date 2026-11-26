@@ -1,0 +1,2 @@
+# Interno: {n, r} confirmación de "Reiniciar" desde la lista (r = 500000+id)
+$dialog show @s {type:"minecraft:confirmation",title:{text:"Reiniciar progreso",color:"red",bold:true},body:{type:"minecraft:plain_message",contents:{text:"$(n) volverá a empezar desde madera y cuero. No se puede deshacer.",color:"gray"}},pause:false,yes:{label:{text:"Reiniciar",color:"red"},action:{type:"minecraft:run_command",command:"trigger wb.admin set $(r)"}},no:{label:"Volver",action:{type:"minecraft:run_command",command:"trigger wb.admin set 1"}}}

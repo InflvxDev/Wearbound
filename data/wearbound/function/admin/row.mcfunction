@@ -1,4 +1,4 @@
-# Interno: prepara {p, n, v, m, k, d} para la fila "N. [cabeza] Jugador ..... íconos  v/m"
+# Interno: prepara {p, n, v, m, k, d, u, c} para la fila "N. [cabeza] Jugador ..... íconos  v/m"
 data modify storage wearbound:tmp r set value {}
 data modify storage wearbound:tmp r.n set from storage wearbound:tmp sorted[0].n
 data modify storage wearbound:tmp r.v set from storage wearbound:tmp sorted[0].v
@@ -8,6 +8,9 @@ execute store result storage wearbound:tmp r.p int 1 run scoreboard players get 
 # d = valor del trigger para abrir su detalle
 execute store result score #id wb.calc run data get storage wearbound:tmp sorted[0].id
 execute store result storage wearbound:tmp r.d int 1 run scoreboard players add #id wb.calc 100000
+# u = desbloquear todo (400000+id), c = confirmar reinicio (600000+id)
+execute store result storage wearbound:tmp r.u int 1 run scoreboard players add #id wb.calc 300000
+execute store result storage wearbound:tmp r.c int 1 run scoreboard players add #id wb.calc 200000
 # Relleno con puntos para que los íconos queden más o menos alineados
 scoreboard players set #pad wb.calc 18
 execute store result score #len wb.calc run data get storage wearbound:tmp r.n

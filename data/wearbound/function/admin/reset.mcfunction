@@ -5,4 +5,6 @@ $function wearbound:gen/set_all {n:"$(n)",t:0,a:0}
 $scoreboard players set $(n) wb.mode 1
 $tellraw @s [{text:"",color:"green"},{text:"Progreso de ",color:"green"},{text:"$(n)",color:"white"},{text:" reiniciado.",color:"green"}]
 $tellraw $(n) [{text:"",color:"red"},{text:"Un admin reinició tu progreso: vuelves a madera y cuero.",color:"red"}]
+# Desde los botones de la lista vuelve a la lista
+execute if score #back wb.calc matches 1 run return run function wearbound:admin/list
 $function wearbound:admin/player {n:"$(n)"}

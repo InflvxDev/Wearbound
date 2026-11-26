@@ -1,5 +1,6 @@
 # Interno: @s tocó un botón del panel (/trigger wb.admin set <acción>)
 #   1 = lista, 100000+id = detalle, 200000+id = desbloquear todo, 300000+id = reiniciar
+#   400000+id / 500000+id = desbloquear todo / reiniciar desde la lista, 600000+id = confirmar reinicio
 scoreboard players operation #t wb.calc = @s wb.admin
 scoreboard players set @s wb.admin 0
 # Solo para quien abrió el panel con /function wearbound:menu (requiere OP)
